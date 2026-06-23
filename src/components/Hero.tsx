@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 const INTERVAL_MS = 3000;
 const FADE_MS = 280;
 
-const socialLinks = [
+export const socialLinks = [
   { label: "Substack", href: site.socials.substack },
   { label: "GitHub", href: site.socials.github },
   { label: "Twitter / X", href: site.socials.twitter },
@@ -53,29 +53,33 @@ function CurrentlyLine() {
 
 export function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-3xl px-6 pt-14 pb-6 md:pt-20 md:pb-8">
+    <section id="top" className="pt-14 md:pt-20">
       <div className="fade-in-up">
         <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-foreground md:text-6xl">
           Hi, I'm {site.name.split(" ")[0]}
         </h1>
         <CurrentlyLine />
-
-        <ul className="mt-32 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm md:mt-48">
-          {socialLinks.map((l) => (
-            <li key={l.label}>
-              <a
-                href={l.href}
-                {...("download" in l && l.download
-                  ? { download: "Xing,Max.pdf" }
-                  : { target: "_blank", rel: "noopener noreferrer" })}
-                className="text-muted-foreground link-underline transition-colors hover:text-foreground"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
+  );
+}
+
+export function SocialLinks() {
+  return (
+    <ul className="flex flex-wrap items-center gap-x-8 gap-y-3 text-xs">
+      {socialLinks.map((l) => (
+        <li key={l.label}>
+          <a
+            href={l.href}
+            {...("download" in l && l.download
+              ? { download: "Xing,Max.pdf" }
+              : { target: "_blank", rel: "noopener noreferrer" })}
+            className="text-muted-foreground transition-colors hover:text-foreground"
+          >
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
