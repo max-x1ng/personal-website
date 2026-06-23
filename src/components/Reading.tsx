@@ -1,5 +1,5 @@
 import { site } from "@/data/site";
-import { Section } from "./Section";
+import { Section, sectionBodyClassName } from "./Section";
 import { Reveal } from "./Reveal";
 
 const groups = [
@@ -21,7 +21,7 @@ export function Reading() {
               <ul className="mt-3 divide-y divide-border">
                 {site.reading[key].map((book) => (
                   <li key={`${book.title}-${book.author}`} className="py-3 first:pt-0 last:pb-0">
-                    <p className="font-serif text-lg text-foreground md:text-xl">{book.title}</p>
+                    <p className={`font-serif ${sectionBodyClassName}`}>{book.title}</p>
                     <p className="mt-1 text-sm text-muted-foreground">{book.author}</p>
                   </li>
                 ))}

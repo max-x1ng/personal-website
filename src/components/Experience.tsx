@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { site } from "@/data/site";
-import { Section } from "./Section";
+import { Section, sectionBodyClassName } from "./Section";
 import { Reveal } from "./Reveal";
 
 const CATS = ["Work", "Education"] as const;
@@ -34,21 +34,15 @@ export function Experience() {
             <Reveal delay={i * 40}>
               <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">
                 <div className="min-w-0">
-                  <h3 className="font-serif text-xl text-foreground">{e.org}</h3>
+                  <h3 className={`font-serif ${sectionBodyClassName}`}>{e.org}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {e.role}
                     {e.location ? ` — ${e.location}` : ""}
                   </p>
                 </div>
-                <p className="shrink-0 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                  {e.start} — {e.end}
-                </p>
+                <p className="shrink-0 text-sm text-muted-foreground">{e.start} — {e.end}</p>
               </div>
-              {e.description ? (
-                <p className="mt-3 max-w-2xl text-base leading-relaxed text-foreground/90">
-                  {e.description}
-                </p>
-              ) : null}
+              {e.description ? <p className={`mt-3 ${sectionBodyClassName}`}>{e.description}</p> : null}
             </Reveal>
           </li>
         ))}

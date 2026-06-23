@@ -13,6 +13,7 @@ export const site = {
     "DJing",
     "talking to cool people",
     "tinkering",
+    "stargazing",
   ],
   email: "max_xing@brown.edu",
   resumeUrl: "/resume.pdf",

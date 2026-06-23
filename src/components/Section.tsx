@@ -1,4 +1,18 @@
 import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+
+export const sectionBodyClassName =
+  "text-sm leading-relaxed text-foreground md:text-base";
+
+export function SectionBody({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <div className={cn(sectionBodyClassName, className)}>{children}</div>;
+}
 
 export function Section({
   id,
