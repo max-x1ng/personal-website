@@ -24,10 +24,10 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/max-xing-949779276/",
   },
   about: [
-    "Hi! My name is Max, and I'm a rising junior at Brown University studying Applied Math-Computer Science. I'm from the Bay Area, California, and grew up there, so as a result I had a lot of early exposure to the tech and startup ecosystems. And after talking to my friends' parents, many of whom were early stage tech investors, I fell in love with helping companies grow.",
-    "When I got to Brown, I joined Van Wickle Ventures, which is campus' venture capital club that invests in Brown affiliated startups. I learned how to value an early stage company and also how to talk with founders. That led me to interning at a small tech-VC firm called SaaS Ventures last summer and Antler in San Francisco this summer. These experiences quickly taught me that I love investing and doing deep research into both companies and industries.",
+    "Hi! My name is Max, and I'm studying Applied Math & Computer Science at Brown University. I'm from the Bay Area, California, and as a result I had a lot of early exposure to the tech and startup ecosystems. So after talking to my friends' parents, many of whom were early stage tech investors, I fell in love with helping companies grow.",
+    "When I got to Brown, I joined Van Wickle Ventures, which is our campus' venture capital club that invests in Brown affiliated startups. I learned how to value an early stage company and also how to talk with founders. That led me to interning at a small tech-VC firm called SaaS Ventures last summer and Antler in San Francisco this summer. These experiences quickly taught me that I love investing and doing deep research into both companies and industries.",
     "More recently, I've also developed an interest in markets. As a lifelong debater, I love thinking about how macroeconomic trends impact markets, and breaking down complex investment decisions into first principles.",
-    "Besides that, I love playing basketball, and I've recently picked up deejaying as well!",
+    "Besides that, I love playing basketball, and I've recently picked up DJing as well! Oh, and if you couldn't tell already, I love stars :)",
   ],
   experience: [
     {
