@@ -76,40 +76,6 @@ export const site = {
       url: "https://substack.com/home/post/p-194315729",
     },
   },
-  projects: [
-    {
-      name: "Compute Atlas",
-      description:
-        "An open dataset and visualization tracking the cost, location, and energy mix of global AI training runs.",
-      tech: ["Research", "Data", "Next.js"],
-      github: "https://github.com/yourhandle/compute-atlas",
-      live: "https://compute-atlas.example.com",
-    },
-    {
-      name: "Memo Engine",
-      description:
-        "A small tool that turns conversation transcripts into structured investment memos. Built mostly for myself.",
-      tech: ["TypeScript", "LLMs"],
-      github: "https://github.com/yourhandle/memo-engine",
-      live: null,
-    },
-    {
-      name: "On Spatial Intelligence",
-      description:
-        "An evolving thesis on robotics, world models, and the infrastructure required for embodied AI to matter.",
-      tech: ["Essay", "Investing"],
-      github: null,
-      live: "https://substack.com/@yourhandle/p/spatial",
-    },
-    {
-      name: "Pianola",
-      description:
-        "An experiment in turning practice sessions into structured feedback using audio models and a little music theory.",
-      tech: ["Audio", "Python"],
-      github: "https://github.com/yourhandle/pianola",
-      live: null,
-    },
-  ],
   interests: [
     "Artificial Intelligence",
     "Semiconductors",

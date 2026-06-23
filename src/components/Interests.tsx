@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function Interests() {
   return (
-    <Section id="interests" eyebrow="05" title="Currently thinking about">
+    <Section id="interests" eyebrow="04" title="Currently thinking about">
       <Reveal>
         <ul className="flex flex-wrap gap-x-6 gap-y-3 font-serif text-xl text-foreground md:text-2xl">
           {site.interests.map((t, i) => (

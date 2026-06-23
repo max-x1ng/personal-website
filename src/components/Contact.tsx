@@ -15,7 +15,7 @@ export function Contact() {
   };
 
   return (
-    <Section id="contact" eyebrow="07" title="Get in touch">
+    <Section id="contact" eyebrow="06" title="Get in touch">
       <Reveal>
         <p className="max-w-2xl font-serif text-2xl leading-snug text-foreground md:text-3xl">
           I'm always interested in meeting thoughtful people working on ambitious ideas — in
