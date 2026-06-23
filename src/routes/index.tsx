@@ -1,29 +1,53 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/Nav";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Experience } from "@/components/Experience";
+import { Writing } from "@/components/Writing";
+import { Projects } from "@/components/Projects";
+import { Interests } from "@/components/Interests";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+import { site } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: `${site.name} — Investor, builder, writer` },
+      {
+        name: "description",
+        content:
+          "Personal site of " +
+          site.name +
+          ". Writing, projects, and notes on AI, investing, and human behavior.",
+      },
+      { property: "og:title", content: `${site.name}` },
+      {
+        property: "og:description",
+        content: "Writing, projects, and notes on AI, investing, and human behavior.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Writing />
+        <Projects />
+        <Interests />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
