@@ -14,7 +14,7 @@ export function Experience() {
 
   return (
     <Section id="experience" eyebrow="02" title="Experience">
-      <div className="mb-8 flex flex-wrap gap-x-5 gap-y-2">
+      <div className="mb-5 flex flex-wrap gap-x-5 gap-y-2">
         {CATS.map((c) => (
           <button
             key={c}
@@ -30,7 +30,7 @@ export function Experience() {
 
       <ul className="divide-y divide-border">
         {items.map((e, i) => (
-          <li key={`${e.org}-${i}`} className="py-6">
+          <li key={`${e.org}-${i}`} className="py-4">
             <Reveal delay={i * 40}>
               <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">
                 <div className="min-w-0">

@@ -1,45 +1,56 @@
-import { ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
 import { site } from "@/data/site";
 
-const links = [
-  { label: "Substack", href: site.socials.substack },
-  { label: "GitHub", href: site.socials.github },
-  { label: "Twitter", href: site.socials.twitter },
-  { label: "LinkedIn", href: site.socials.linkedin },
-  { label: "Résumé", href: site.resumeUrl, download: true },
-];
+const INTERVAL_MS = 3000;
+const FADE_MS = 280;
+
+function CurrentlyLine() {
+  const phrases = site.currentlyPhrases;
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    let swapTimeout: ReturnType<typeof setTimeout>;
+
+    const interval = window.setInterval(() => {
+      setVisible(false);
+      swapTimeout = window.setTimeout(() => {
+        setIndex((i) => (i + 1) % phrases.length);
+        setVisible(true);
+      }, FADE_MS);
+    }, INTERVAL_MS);
+
+    return () => {
+      window.clearInterval(interval);
+      window.clearTimeout(swapTimeout);
+    };
+  }, [phrases.length]);
+
+  return (
+    <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+      Currently{" "}
+      <span
+        className="inline-block text-foreground transition-all duration-300 ease-out"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0)" : "translateY(6px)",
+        }}
+        aria-live="polite"
+      >
+        {phrases[index]}
+      </span>
+    </p>
+  );
+}
 
 export function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-3xl px-6 pt-20 pb-24 md:pt-28 md:pb-32">
+    <section id="top" className="mx-auto max-w-3xl px-6 pt-14 pb-6 md:pt-20 md:pb-8">
       <div className="fade-in-up">
-        <p className="mb-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-          {site.status}
-        </p>
-        <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-foreground md:text-7xl">
+        <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-foreground md:text-6xl">
           Hi, I'm {site.name.split(" ")[0]}.
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground md:text-xl">
-          {site.intro}
-        </p>
-
-        <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
-          {links.map((l) => (
-            <li key={l.label}>
-              <a
-                href={l.href}
-                {...("download" in l && l.download
-                  ? { download: "Xing,Max.pdf" }
-                  : { target: "_blank", rel: "noopener noreferrer" })}
-                className="group inline-flex items-center gap-1 text-sm text-foreground transition-colors hover:text-accent"
-              >
-                <span className="link-underline link-underline-hover">{l.label}</span>
-                <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
-              </a>
-            </li>
-          ))}
-        </ul>
+        <CurrentlyLine />
       </div>
     </section>
   );

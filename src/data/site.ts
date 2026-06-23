@@ -5,6 +5,15 @@ export const site = {
     "I spend my time thinking about artificial intelligence, capital, and the long arc of how new technologies reshape the way we live and work.",
   status:
     "Currently researching AI infrastructure and spatial intelligence, and interested in macroeconomic markets.",
+  currentlyPhrases: [
+    "writing about robotics",
+    "reading about AI infrastructure",
+    "studying markets",
+    "playing basketball",
+    "DJing",
+    "talking to cool people",
+    "tinkering",
+  ],
   email: "max_xing@brown.edu",
   resumeUrl: "/resume.pdf",
   socials: {

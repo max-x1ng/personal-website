@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
-import { site } from "@/data/site";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#writing", label: "Writing" },
-  { href: "#contact", label: "Contact" },
-];
+  { to: "/about", label: "About" },
+  { to: "/experience", label: "Experience" },
+  { to: "/writing", label: "Writing" },
+  { to: "/reading", label: "Reading" },
+  { to: "/", hash: "contact", label: "Contact" },
+] as const;
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -27,23 +28,17 @@ export function Nav() {
         scrolled ? "border-b border-border bg-background/80" : "bg-background/0"
       }`}
     >
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-        <a
-          href="#top"
-          className="font-serif text-xl tracking-tight text-foreground transition-colors hover:text-accent"
-        >
-          {site.initials}.
-        </a>
-
-        <ul className="hidden items-center gap-7 md:flex">
+      <nav className="mx-auto flex max-w-3xl items-center justify-end px-6 py-2.5">
+        <ul className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
+            <li key={l.label}>
+              <Link
+                to={l.to}
+                {...("hash" in l && l.hash ? { hash: l.hash } : {})}
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
@@ -68,14 +63,15 @@ export function Nav() {
         <div className="border-t border-border bg-background md:hidden">
           <ul className="mx-auto flex max-w-3xl flex-col px-6 py-3">
             {links.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
+              <li key={l.label}>
+                <Link
+                  to={l.to}
+                  {...("hash" in l && l.hash ? { hash: l.hash } : {})}
                   onClick={() => setOpen(false)}
                   className="block py-3 text-sm text-foreground transition-colors hover:text-accent"
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

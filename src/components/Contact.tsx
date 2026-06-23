@@ -4,6 +4,14 @@ import { site } from "@/data/site";
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
 
+const links = [
+  { label: "Substack", href: site.socials.substack },
+  { label: "GitHub", href: site.socials.github },
+  { label: "Twitter / X", href: site.socials.twitter },
+  { label: "LinkedIn", href: site.socials.linkedin },
+  { label: "Resume", href: site.resumeUrl, download: true },
+] as const;
+
 export function Contact() {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
@@ -15,14 +23,9 @@ export function Contact() {
   };
 
   return (
-    <Section id="contact" eyebrow="06" title="Get in touch">
+    <Section id="contact" title="Get In Touch">
       <Reveal>
-        <p className="max-w-2xl font-serif text-2xl leading-snug text-foreground md:text-3xl">
-          I'm always interested in meeting thoughtful people working on ambitious ideas — in
-          research, investing, or anything in between. Don't hesitate to reach out.
-        </p>
-
-        <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
           <a
             href={`mailto:${site.email}`}
             className="text-sm text-foreground link-underline link-underline-hover"
@@ -39,16 +42,17 @@ export function Contact() {
           </button>
         </div>
 
-        <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm">
-          {(["twitter", "linkedin", "substack"] as const).map((k) => (
-            <li key={k}>
+        <ul className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
+          {links.map((l) => (
+            <li key={l.label}>
               <a
-                href={site.socials[k]}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground transition-colors hover:text-accent link-underline link-underline-hover capitalize"
+                href={l.href}
+                {...("download" in l && l.download
+                  ? { download: "Xing,Max.pdf" }
+                  : { target: "_blank", rel: "noopener noreferrer" })}
+                className="text-muted-foreground link-underline transition-colors hover:text-foreground"
               >
-                {k === "twitter" ? "Twitter / X" : k}
+                {l.label}
               </a>
             </li>
           ))}
