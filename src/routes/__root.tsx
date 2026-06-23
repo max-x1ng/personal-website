@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { site } from "@/data/site";
 
 function NotFoundComponent() {
   return (
@@ -79,9 +80,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Lovable App" },
-      { property: "og:title", content: "Lovable App" },
-      { name: "twitter:title", content: "Lovable App" },
+      { title: site.name },
+      { property: "og:title", content: site.name },
+      { name: "twitter:title", content: site.name },
       { name: "description", content: "A modern, minimal personal website showcasing your expertise in technology, investing, AI, and writing." },
       { property: "og:description", content: "A modern, minimal personal website showcasing your expertise in technology, investing, AI, and writing." },
       { name: "twitter:description", content: "A modern, minimal personal website showcasing your expertise in technology, investing, AI, and writing." },
@@ -96,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
     ],
   }),
   shellComponent: RootShell,

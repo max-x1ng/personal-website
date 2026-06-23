@@ -8,7 +8,7 @@ import { site } from "@/data/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `${site.name} — Investor, builder, writer` },
+      { title: site.name },
       {
         name: "description",
         content:
