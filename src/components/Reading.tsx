@@ -10,7 +10,7 @@ const groups = [
 
 export function Reading() {
   return (
-    <Section id="reading" eyebrow="01" title="Reading">
+    <Section id="reading" title="Reading">
       <div className="space-y-6">
         {groups.map(({ key, label }, i) => (
           <Reveal key={key} delay={i * 40}>

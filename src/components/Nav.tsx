@@ -4,11 +4,11 @@ import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
+  { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/experience", label: "Experience" },
   { to: "/writing", label: "Writing" },
   { to: "/reading", label: "Reading" },
-  { to: "/", hash: "contact", label: "Contact" },
 ] as const;
 
 export function Nav() {
@@ -34,7 +34,6 @@ export function Nav() {
             <li key={l.label}>
               <Link
                 to={l.to}
-                {...("hash" in l && l.hash ? { hash: l.hash } : {})}
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
@@ -66,7 +65,6 @@ export function Nav() {
               <li key={l.label}>
                 <Link
                   to={l.to}
-                  {...("hash" in l && l.hash ? { hash: l.hash } : {})}
                   onClick={() => setOpen(false)}
                   className="block py-3 text-sm text-foreground transition-colors hover:text-accent"
                 >

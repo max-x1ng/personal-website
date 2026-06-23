@@ -4,6 +4,14 @@ import { site } from "@/data/site";
 const INTERVAL_MS = 3000;
 const FADE_MS = 280;
 
+const socialLinks = [
+  { label: "Substack", href: site.socials.substack },
+  { label: "GitHub", href: site.socials.github },
+  { label: "Twitter / X", href: site.socials.twitter },
+  { label: "LinkedIn", href: site.socials.linkedin },
+  { label: "Resume", href: site.resumeUrl, download: true },
+] as const;
+
 function CurrentlyLine() {
   const phrases = site.currentlyPhrases;
   const [index, setIndex] = useState(0);
@@ -51,6 +59,22 @@ export function Hero() {
           Hi, I'm {site.name.split(" ")[0]}.
         </h1>
         <CurrentlyLine />
+
+        <ul className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
+          {socialLinks.map((l) => (
+            <li key={l.label}>
+              <a
+                href={l.href}
+                {...("download" in l && l.download
+                  ? { download: "Xing,Max.pdf" }
+                  : { target: "_blank", rel: "noopener noreferrer" })}
+                className="text-muted-foreground link-underline transition-colors hover:text-foreground"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

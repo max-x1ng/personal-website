@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
-import { Contact } from "@/components/Contact";
 import { PageShell } from "@/components/PageShell";
 import { site } from "@/data/site";
 
@@ -32,7 +31,6 @@ function Index() {
   return (
     <PageShell>
       <Hero />
-      <Contact />
     </PageShell>
   );
 }

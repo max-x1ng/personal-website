@@ -6,7 +6,7 @@ import { Reveal } from "./Reveal";
 export function Writing() {
   const f = site.writing.featured;
   return (
-    <Section id="writing" eyebrow="03" title="Writing">
+    <Section id="writing" title="Writing">
       <Reveal>
         <a
           href={f.url}
@@ -15,8 +15,6 @@ export function Writing() {
           className="group block border-b border-border pb-6"
         >
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            <span className="text-accent">Featured</span>
-            <span>·</span>
             <span>{f.topic}</span>
             <span>·</span>
             <span>{f.date}</span>
@@ -35,7 +33,7 @@ export function Writing() {
       </Reveal>
 
       <Reveal delay={40}>
-        <p className="mt-6 text-sm text-muted-foreground md:text-base">Under Construction</p>
+        <p className="mt-6 text-sm text-muted-foreground md:text-base">More coming soon...</p>
       </Reveal>
     </Section>
   );

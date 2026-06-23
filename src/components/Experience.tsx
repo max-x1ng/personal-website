@@ -13,7 +13,7 @@ export function Experience() {
   );
 
   return (
-    <Section id="experience" eyebrow="02" title="Experience">
+    <Section id="experience" title="Experience">
       <div className="mb-5 flex flex-wrap gap-x-5 gap-y-2">
         {CATS.map((c) => (
           <button
