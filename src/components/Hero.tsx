@@ -56,11 +56,11 @@ export function Hero() {
     <section id="top" className="mx-auto max-w-3xl px-6 pt-14 pb-6 md:pt-20 md:pb-8">
       <div className="fade-in-up">
         <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-foreground md:text-6xl">
-          Hi, I'm {site.name.split(" ")[0]}.
+          Hi, I'm {site.name.split(" ")[0]}
         </h1>
         <CurrentlyLine />
 
-        <ul className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
+        <ul className="mt-32 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm md:mt-48">
           {socialLinks.map((l) => (
             <li key={l.label}>
               <a

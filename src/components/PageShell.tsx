@@ -4,10 +4,10 @@ import { Footer } from "./Footer";
 
 export function PageShell({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen bg-background text-foreground">
       <Nav />
-      <main>{children}</main>
-      <Footer />
+      <main className="relative z-10">{children}</main>
+      <Footer className="relative z-10" />
     </div>
   );
 }

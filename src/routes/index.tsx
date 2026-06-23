@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
+import { InteractiveBackground } from "@/components/InteractiveBackground";
 import { PageShell } from "@/components/PageShell";
 import { site } from "@/data/site";
 
@@ -30,6 +31,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <PageShell>
+      <InteractiveBackground />
       <Hero />
     </PageShell>
   );
