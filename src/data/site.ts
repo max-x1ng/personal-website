@@ -1,18 +1,18 @@
 export const site = {
-  name: "Alex Hartwell",
-  initials: "AH",
+  name: "Max Xing",
+  initials: "MX",
   title: "Investor, builder, and writer at the intersection of technology and human behavior.",
   intro:
     "I spend my time thinking about artificial intelligence, capital, and the long arc of how new technologies reshape the way we live and work. By training I'm part researcher, part operator — most days I'm reading papers, talking to founders, or writing in the margins of both.",
   status:
     "Currently researching AI infrastructure and spatial intelligence, and writing a series on the economics of compute.",
-  email: "hello@example.com",
+  email: "max_xing@brown.edu",
   resumeUrl: "/resume.pdf",
   socials: {
-    substack: "https://substack.com/@yourhandle",
-    github: "https://github.com/yourhandle",
-    twitter: "https://twitter.com/yourhandle",
-    linkedin: "https://linkedin.com/in/yourhandle",
+    substack: "https://substack.com/@maxx1ng",
+    github: "https://github.com/max-x1ng",
+    twitter: "https://x.com/max_x1ng",
+    linkedin: "https://www.linkedin.com/in/max-xing-949779276/",
   },
   about: [
     "I grew up between a few cities and spent a long time trying to figure out whether I wanted to be a scientist, a writer, or someone who builds companies. I've made peace with doing a little of all three.",
@@ -52,13 +52,12 @@ export const site = {
       category: "Work",
     },
     {
-      org: "Harvard University",
-      role: "A.B. Computer Science & Economics",
-      location: "Cambridge, MA",
-      start: "2018",
-      end: "2022",
-      description:
-        "Thesis on information cascades in venture markets. Editor at the undergraduate review.",
+      org: "Brown University",
+      role: "Sc.B. Applied Mathematics & Computer Science",
+      location: "Providence, RI",
+      start: "2024",
+      end: "2028",
+      description: "",
       category: "Education",
     },
   ],
@@ -137,14 +136,11 @@ export const site = {
     },
   ],
   interests: [
-    "Artificial intelligence",
-    "Robotics & spatial intelligence",
-    "Technology investing",
-    "AI infrastructure",
-    "Human behavior",
-    "Music & cognition",
-    "Healthcare",
-    "Startups",
+    "Artificial Intelligence",
+    "Semiconductors",
+    "Robotics & Spatial Intelligence",
+    "Technology Investing",
+    "Markets",
   ],
 };
 

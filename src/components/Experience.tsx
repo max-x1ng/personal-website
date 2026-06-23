@@ -44,9 +44,11 @@ export function Experience() {
                   {e.start} — {e.end}
                 </p>
               </div>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed text-foreground/90">
-                {e.description}
-              </p>
+              {e.description ? (
+                <p className="mt-3 max-w-2xl text-base leading-relaxed text-foreground/90">
+                  {e.description}
+                </p>
+              ) : null}
             </Reveal>
           </li>
         ))}

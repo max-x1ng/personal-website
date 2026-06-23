@@ -6,7 +6,7 @@ const links = [
   { label: "GitHub", href: site.socials.github },
   { label: "Twitter", href: site.socials.twitter },
   { label: "LinkedIn", href: site.socials.linkedin },
-  { label: "Résumé", href: site.resumeUrl },
+  { label: "Résumé", href: site.resumeUrl, download: true },
 ];
 
 export function Hero() {
@@ -32,8 +32,9 @@ export function Hero() {
             <li key={l.label}>
               <a
                 href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...("download" in l && l.download
+                  ? { download: "Xing,Max.pdf" }
+                  : { target: "_blank", rel: "noopener noreferrer" })}
                 className="group inline-flex items-center gap-1 text-sm text-foreground transition-colors hover:text-accent"
               >
                 <span className="link-underline link-underline-hover">{l.label}</span>
