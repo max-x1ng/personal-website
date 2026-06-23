@@ -1,6 +1,9 @@
 export const site = {
   name: "Max Xing",
   initials: "MX",
+  socialImage: "/og-image.png",
+  socialImageWidth: 1200,
+  socialImageHeight: 630,
   intro:
     "I spend my time thinking about artificial intelligence, capital, and the long arc of how new technologies reshape the way we live and work.",
   status:
