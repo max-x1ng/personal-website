@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <PageShell hideFooter>
+    <PageShell hideFooter fullBleed>
       <InteractiveBackground />
       <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6">
         <Hero />

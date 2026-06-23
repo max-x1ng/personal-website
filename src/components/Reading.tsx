@@ -1,5 +1,5 @@
 import { site } from "@/data/site";
-import { Section, sectionBodyClassName } from "./Section";
+import { Section, SectionBody, sectionBodyClassName, sectionHeaderAsideClassName } from "./Section";
 import { Reveal } from "./Reveal";
 
 const groups = [
@@ -11,13 +11,11 @@ const groups = [
 export function Reading() {
   return (
     <Section id="reading" title="Reading">
-      <div className="space-y-6">
-        {groups.map(({ key, label }, i) => (
-          <Reveal key={key} delay={i * 40}>
-            <div>
-              <h3 className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                {label}
-              </h3>
+      <Reveal>
+        <SectionBody className="space-y-6">
+          {groups.map(({ key, label }) => (
+            <div key={key}>
+              <h3 className={sectionHeaderAsideClassName}>{label}</h3>
               <ul className="mt-3 divide-y divide-border">
                 {site.reading[key].map((book) => (
                   <li key={`${book.title}-${book.author}`} className="py-3 first:pt-0 last:pb-0">
@@ -27,9 +25,9 @@ export function Reading() {
                 ))}
               </ul>
             </div>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </SectionBody>
+      </Reveal>
     </Section>
   );
 }

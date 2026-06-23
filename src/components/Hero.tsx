@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { site } from "@/data/site";
 
+const PHRASES = site.currentlyPhrases;
 const INTERVAL_MS = 3000;
 const FADE_MS = 280;
 
@@ -13,31 +14,45 @@ export const socialLinks = [
 ] as const;
 
 function CurrentlyLine() {
-  const phrases = site.currentlyPhrases;
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    let swapTimeout: ReturnType<typeof setTimeout>;
+    if (PHRASES.length === 0) return;
 
-    const interval = window.setInterval(() => {
-      setVisible(false);
-      swapTimeout = window.setTimeout(() => {
-        setIndex((i) => (i + 1) % phrases.length);
-        setVisible(true);
-      }, FADE_MS);
-    }, INTERVAL_MS);
+    let cancelled = false;
+    let timeoutId = 0;
+
+    const scheduleNext = () => {
+      timeoutId = window.setTimeout(() => {
+        if (cancelled) return;
+
+        setVisible(false);
+        timeoutId = window.setTimeout(() => {
+          if (cancelled) return;
+
+          setIndex((i) => (i + 1) % PHRASES.length);
+          setVisible(true);
+          scheduleNext();
+        }, FADE_MS);
+      }, INTERVAL_MS);
+    };
+
+    scheduleNext();
 
     return () => {
-      window.clearInterval(interval);
-      window.clearTimeout(swapTimeout);
+      cancelled = true;
+      window.clearTimeout(timeoutId);
     };
-  }, [phrases.length]);
+  }, []);
+
+  const phrase = PHRASES[index] ?? PHRASES[0];
 
   return (
     <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
       Currently{" "}
       <span
+        key={phrase}
         className="inline-block text-foreground transition-all duration-300 ease-out"
         style={{
           opacity: visible ? 1 : 0,
@@ -45,7 +60,7 @@ function CurrentlyLine() {
         }}
         aria-live="polite"
       >
-        {phrases[index]}
+        {phrase}
       </span>
     </p>
   );
