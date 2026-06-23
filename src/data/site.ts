@@ -1,11 +1,10 @@
 export const site = {
   name: "Max Xing",
   initials: "MX",
-  title: "Investor, builder, and writer at the intersection of technology and human behavior.",
   intro:
-    "I spend my time thinking about artificial intelligence, capital, and the long arc of how new technologies reshape the way we live and work. By training I'm part researcher, part operator — most days I'm reading papers, talking to founders, or writing in the margins of both.",
+    "I spend my time thinking about artificial intelligence, capital, and the long arc of how new technologies reshape the way we live and work.",
   status:
-    "Currently researching AI infrastructure and spatial intelligence, and writing a series on the economics of compute.",
+    "Currently researching AI infrastructure and spatial intelligence, and interested in macroeconomic markets.",
   email: "max_xing@brown.edu",
   resumeUrl: "/resume.pdf",
   socials: {
@@ -15,40 +14,46 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/max-xing-949779276/",
   },
   about: [
-    "I grew up between a few cities and spent a long time trying to figure out whether I wanted to be a scientist, a writer, or someone who builds companies. I've made peace with doing a little of all three.",
-    "My background is in computer science and economics. Before now, I worked at the intersection of applied research and early-stage investing, with detours through product, policy, and a brief, formative obsession with classical piano.",
-    "I'm most interested in questions that sit between disciplines: how machine intelligence changes the structure of markets, why certain ideas compound and others don't, and what good taste looks like in a world of infinite leverage.",
-    "Outside of work I read more fiction than I probably should, run slowly but consistently, and am always looking for a good record store.",
+    "Hi! My name is Max, and I'm a rising junior at Brown University studying Applied Math-Computer Science. I'm from the Bay Area, California, and grew up there, so as a result I had a lot of early exposure to the tech and startup ecosystems. And after talking to my friends' parents, many of whom were early stage tech investors, I fell in love with helping companies grow.",
+    "When I got to Brown, I joined Van Wickle Ventures, which is campus' venture capital club that invests in Brown affiliated startups. I learned how to value an early stage company and also how to talk with founders. That led me to interning at a small tech-VC firm called SaaS Ventures last summer and Antler in San Francisco this summer. These experiences quickly taught me that I love investing and doing deep research into both companies and industries.",
+    "More recently, I've also developed an interest in markets. As a lifelong debater, I love thinking about how macroeconomic trends impact markets, and breaking down complex investment decisions into first principles.",
+    "Besides that, I love playing basketball, and I've recently picked up deejaying as well!",
   ],
   experience: [
     {
-      org: "Halcyon Capital",
-      role: "Investor",
-      location: "New York, NY",
-      start: "2024",
+      org: "Antler",
+      role: "Investment Intern",
+      location: "San Francisco, CA",
+      start: "June 2026",
       end: "Present",
-      description:
-        "Early-stage investing focused on AI infrastructure, applied research, and developer tools.",
+      description: "Early-stage investing focused on technology.",
       category: "Work",
     },
     {
-      org: "Stanford HAI",
-      role: "Visiting Researcher",
-      location: "Stanford, CA",
-      start: "2023",
-      end: "2024",
-      description:
-        "Research on alignment evaluation methods and the economics of large-scale model deployment.",
-      category: "Research",
+      org: "Array Ventures",
+      role: "Venture Scout",
+      location: "San Francisco, CA",
+      start: "May 2026",
+      end: "Present",
+      description: "Early-stage investing focused on AI infrastructure.",
+      category: "Work",
     },
     {
-      org: "Anthropic",
-      role: "Product, Applied",
-      location: "San Francisco, CA",
-      start: "2022",
-      end: "2023",
-      description:
-        "Worked across enterprise product and developer experience for foundation model APIs.",
+      org: "SaaS Ventures",
+      role: "Venture Capital Intern",
+      location: "Miami, FL",
+      start: "May 2025",
+      end: "August 2025",
+      description: "Early-stage investing focused on cybersecurity and software.",
+      category: "Work",
+    },
+    {
+      org: "Credo Semiconductor Inc.",
+      role: "Internal Applications Intern",
+      location: "San Jose, CA",
+      start: "June 2024",
+      end: "August 2024",
+      description: "Testing networking semiconductors.",
       category: "Work",
     },
     {
@@ -63,43 +68,13 @@ export const site = {
   ],
   writing: {
     featured: {
-      title: "The Quiet Repricing of Compute",
-      date: "May 2026",
+      title: "How AI Capital Expenditures Impact Semiconductor Markets",
+      date: "March 2026",
       topic: "AI Infrastructure",
       description:
-        "A long essay on how the cost curve of inference is reshaping the economics of every software business built in the last decade.",
-      url: "https://substack.com/@yourhandle/p/quiet-repricing",
+        "An investment thesis on the direction of the semiconductor market in the age of Artificial Intelligence.",
+      url: "https://substack.com/home/post/p-194315729",
     },
-    posts: [
-      {
-        title: "Notes on Taste",
-        date: "Apr 2026",
-        topic: "Essays",
-        description: "Why taste, not intelligence, is becoming the scarce resource.",
-        url: "#",
-      },
-      {
-        title: "Spatial Intelligence is the Next Interface",
-        date: "Feb 2026",
-        topic: "AI",
-        description: "On robotics, embodied models, and what comes after the chat box.",
-        url: "#",
-      },
-      {
-        title: "What I Learned Reading 100 Investment Memos",
-        date: "Jan 2026",
-        topic: "Investing",
-        description: "Patterns from a year of writing — and rewriting — conviction.",
-        url: "#",
-      },
-      {
-        title: "The Underrated Discipline of Slow Thinking",
-        date: "Nov 2025",
-        topic: "Essays",
-        description: "A defense of the long walk in an age of instant answers.",
-        url: "#",
-      },
-    ],
   },
   projects: [
     {
@@ -142,6 +117,18 @@ export const site = {
     "Technology Investing",
     "Markets",
   ],
+  reading: {
+    read: [{ title: "Zero to One", author: "Peter Thiel" }],
+    currentlyReading: [
+      { title: "When Genius Failed", author: "Roger Lowenstein" },
+      { title: "The Chip War", author: "Chris Miller" },
+    ],
+    readingList: [
+      { title: "Common Stocks and Uncommon Profits", author: "Philip A. Fisher" },
+      { title: "Fooled by Randomness", author: "Nassim Nicholas Taleb" },
+      { title: "Principles", author: "Ray Dalio" },
+    ],
+  },
 };
 
 export type Site = typeof site;

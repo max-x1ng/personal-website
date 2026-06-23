@@ -3,12 +3,12 @@ import { site } from "@/data/site";
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
 
-const CATS = ["All", "Work", "Research", "Education"] as const;
+const CATS = ["Work", "Education"] as const;
 
 export function Experience() {
-  const [cat, setCat] = useState<(typeof CATS)[number]>("All");
+  const [cat, setCat] = useState<(typeof CATS)[number]>("Work");
   const items = useMemo(
-    () => (cat === "All" ? site.experience : site.experience.filter((e) => e.category === cat)),
+    () => site.experience.filter((e) => e.category === cat),
     [cat],
   );
 

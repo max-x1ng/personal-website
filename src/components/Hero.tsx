@@ -21,9 +21,6 @@ export function Hero() {
           Hi, I'm {site.name.split(" ")[0]}.
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground md:text-xl">
-          {site.title}
-        </p>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
           {site.intro}
         </p>
 
