@@ -28,8 +28,16 @@ export function Footer({
   }
 
   return (
-    <footer className={mergedClass || undefined}>
-      <div className="mx-auto max-w-3xl px-6 pb-4 pt-2 text-xs text-muted-foreground">{content}</div>
+    <footer className={className}>
+      <div className="mx-auto w-full max-w-3xl px-6">
+        <div
+          className={`pb-4 pt-2 text-xs text-muted-foreground${
+            borderless ? "" : " border-t border-border"
+          }`}
+        >
+          {content}
+        </div>
+      </div>
     </footer>
   );
 }
