@@ -15,7 +15,7 @@ export function Footer({
 
   const content = (
     <p>
-      © {year} {site.name}. Designed by Max, built by Cursor.
+      © {year} {site.name}. Designed by Max, built with Cursor.
     </p>
   );
 

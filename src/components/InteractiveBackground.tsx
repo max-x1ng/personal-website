@@ -13,10 +13,10 @@ type Particle = {
 function getThemeColors() {
   const isDark = document.documentElement.classList.contains("dark");
   return {
-    dot: isDark ? "oklch(0.65 0.012 70 / 0.45)" : "oklch(0.5 0.015 60 / 0.4)",
-    line: isDark ? "oklch(0.68 0.13 40)" : "oklch(0.58 0.13 38)",
-    lineOpacity: isDark ? 0.14 : 0.1,
-    glow: isDark ? "oklch(0.68 0.13 40 / 0.08)" : "oklch(0.58 0.13 38 / 0.06)",
+    dot: isDark ? "oklch(0.65 0.012 70 / 0.45)" : "oklch(0.42 0.025 55 / 0.62)",
+    line: isDark ? "oklch(0.68 0.13 40)" : "oklch(0.52 0.14 38)",
+    lineOpacity: isDark ? 0.14 : 0.22,
+    glow: isDark ? "oklch(0.68 0.13 40 / 0.08)" : "oklch(0.52 0.14 38 / 0.12)",
   };
 }
 
