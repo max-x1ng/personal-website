@@ -86,7 +86,7 @@ export const site = {
       topic: "AI Infrastructure",
       description:
         "An investment thesis on the direction of the semiconductor market in the age of Artificial Intelligence.",
-      url: "https://substack.com/home/post/p-194315729",
+      url: "/ai-hardware-essay.pdf",
     },
   },
   interests: [
