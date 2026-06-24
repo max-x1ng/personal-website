@@ -21,7 +21,7 @@ export const site = {
   email: "max_xing@brown.edu",
   resumeUrl: "/resume.pdf",
   socials: {
-    substack: "https://substack.com/@maxx1ng",
+    substack: "https://xingmax.substack.com/",
     github: "https://github.com/max-x1ng",
     twitter: "https://x.com/max_x1ng",
     linkedin: "https://www.linkedin.com/in/max-xing-949779276/",
