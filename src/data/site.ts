@@ -39,7 +39,7 @@ export const site = {
       location: "San Francisco, CA",
       start: "June 2026",
       end: "Present",
-      description: "Early-stage investing focused on technology.",
+      description: "Early-stage investing focused on technology",
       category: "Work",
     },
     {
@@ -48,7 +48,7 @@ export const site = {
       location: "San Francisco, CA",
       start: "May 2026",
       end: "Present",
-      description: "Early-stage investing focused on AI infrastructure.",
+      description: "Early-stage investing focused on AI infrastructure",
       category: "Work",
     },
     {
@@ -57,7 +57,7 @@ export const site = {
       location: "Miami, FL",
       start: "May 2025",
       end: "August 2025",
-      description: "Early-stage investing focused on cybersecurity and software.",
+      description: "Early-stage investing focused on cybersecurity and software",
       category: "Work",
     },
     {
@@ -66,7 +66,7 @@ export const site = {
       location: "San Jose, CA",
       start: "June 2024",
       end: "August 2024",
-      description: "Testing networking semiconductors.",
+      description: "Testing networking semiconductors",
       category: "Work",
     },
     {
@@ -80,14 +80,23 @@ export const site = {
     },
   ],
   writing: {
-    featured: {
-      title: "How AI Capital Expenditures Impact Semiconductor Markets",
-      date: "March 2026",
-      topic: "AI Infrastructure",
-      description:
-        "An investment thesis on the direction of the semiconductor market in the age of Artificial Intelligence.",
-      url: "/ai-hardware-essay.pdf",
-    },
+    items: [
+      {
+        title: "An Investing Thesis: Bitcoin, Google, Copper",
+        date: "June 2026",
+        topic: "Thoughts on the Market",
+        description: "A short memo on a couple directional bets in the markets",
+        url: "https://substack.com/home/post/p-203353298",
+      },
+      {
+        title: "How AI Capital Expenditures Impact Semiconductor Markets",
+        date: "March 2026",
+        topic: "AI Infrastructure",
+        description:
+          "An investment thesis on the direction of the semiconductor market in the age of Artificial Intelligence",
+        url: "/ai-hardware-essay.pdf",
+      },
+    ],
   },
   interests: [
     "Artificial Intelligence",
