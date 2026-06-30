@@ -110,6 +110,7 @@ export const site = {
     currentlyReading: [
       { title: "When Genius Failed", author: "Roger Lowenstein" },
       { title: "The Chip War", author: "Chris Miller" },
+      { title: "Situational Awareness", author: "Leopold Aschenbrenner" },
     ],
     readingList: [
       { title: "Common Stocks and Uncommon Profits", author: "Philip A. Fisher" },
