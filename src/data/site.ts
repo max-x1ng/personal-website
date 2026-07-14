@@ -82,6 +82,13 @@ export const site = {
   writing: {
     items: [
       {
+        title: "Ambarella (AMBA) Pitch",
+        date: "July 2026",
+        topic: "Stock Pitch",
+        description: "A nuanced bet on an edge inference semis company",
+        url: "/ambarella-pitch.pdf",
+      },
+      {
         title: "An Investing Thesis: Bitcoin, Google, Copper",
         date: "June 2026",
         topic: "Thoughts on the Market",
