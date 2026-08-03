@@ -38,7 +38,7 @@ export const site = {
       role: "Investment Intern",
       location: "San Francisco, CA",
       start: "June 2026",
-      end: "Present",
+      end: "August 2026",
       description: "Early-stage investing focused on technology",
       category: "Work",
     },
