@@ -48,7 +48,11 @@ export default defineConfig({
       },
     }),
     // Cloudflare Workers is the deploy target — build from this entry.
-    nitro({ preset: "cloudflare-module" }),
+    // Name is pinned to match the Worker already connected in the Cloudflare
+    // dashboard (Workers & Pages > personal-website); without this, nitro
+    // derives the name from the git remote, which drifts if the repo is
+    // ever renamed and would silently deploy a different Worker.
+    nitro({ preset: "cloudflare-module", cloudflare: { wrangler: { name: "personal-website" } } }),
     viteReact(),
   ],
 });
