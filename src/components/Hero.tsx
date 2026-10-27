@@ -10,7 +10,6 @@ export const socialLinks = [
   { label: "GitHub", href: site.socials.github },
   { label: "Twitter / X", href: site.socials.twitter },
   { label: "LinkedIn", href: site.socials.linkedin },
-  { label: "Resume", href: site.resumeUrl, download: true },
 ] as const;
 
 function CurrentlyLine() {
@@ -86,9 +85,8 @@ export function SocialLinks() {
         <li key={l.label}>
           <a
             href={l.href}
-            {...("download" in l && l.download
-              ? { download: "Xing,Max.pdf" }
-              : { target: "_blank", rel: "noopener noreferrer" })}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             {l.label}
